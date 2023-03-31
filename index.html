@@ -1,2 +1,117 @@
-<p>This is my main webpage!</p>
-<p><&emsp>Please contact: 34320201150174@stu.xmu.edu.cn</p>
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lange="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lange="en">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="autor" content="pf">
+	<title>Fei Pan's main webpage!</title>
+	<!--REQUIRED STYPE SHEETS-->
+	<link href="assets/css/bootstrap.css" rel="stylesheet"/>
+	<link href="assets/css/bootflat.css" rel="stylesheet"/>
+	<!--FONTAWESOME STYPE CSS-->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+	<!--CUSTOM STYPE CSS-->
+	<link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+	<!--Header section-->
+	<div class="container" id="home">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<h1 class="head-main">Welcome to my github main webpage!</h1>
+				<h2 class="head-sub-main"> Just a test static webpage</h2>
+				<h3 class="head-last">Contact Fei Pan: 34320201150174@stu.xmu.edu.cn</h3>
+			</div>
+		</div>
+	</div>
+	<!--Navigation-->
+	<nav classs="navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">BAR1</a>
+			</div>
+			<!-- Collect the nav links for toggling-->
+			<div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
+				<ul class="nav navbbar-nav">
+					<li> <a href="index.html">MAIN PAGE</a> </li>
+					<li> <a href="README.html">README</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<!--About Section-->
+    <section class="for-full-back color-light " id="about">
+        <div class="container introduction">
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2 ">
+                    <h1>Final</h1>
+	     <h3>(I added this section to avoid format errors)</h3>
+                    <!-- <h4>
+                        <strong>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                            </strong>
+                    </h4> -->
+                </div>
+            </div>
+            <div class="row g-pad-bottom">
+                <div class="col-md-12">
+                    <h2>Summary</h2>
+                    <p>
+                        We implemented bitwise neural networks on FPGA and run tests on the MNIST dataset. Experiments show that we achieve 4x speedup compared with the state-of-the-art FPGA implementation.
+                    </p>
+                    <h2>Background</h2>
+                    <p>Deep neural networks (DNNs) have substantially pushed the state-of the-art in a wide range of tasks, including speech recognition and computer vision. However, DNNs also require a wealth of compute resources, and thus can benefit greatly from parallelization.</p>
+                    <p>Moreover, power consumption recently has gained massive attentions due to the emerging of mobile devices. As is well known, running real-time text detection and recognition tasks on standalone devices, like a pair of glasses, will quickly drain the battery. Therefore, we need to exploit the heterogeneity of hardware to boost both performance and efficiency. </p>
+                    <p>The attempt to implement neural networks on FPGA dates back to 24 years ago [1], yet no design shows a potential of commercial use until recently [2]. However, the recent design still suffers from high resource usage and high latency. In this work, we propose a resource-efficient implementation, which also has higher throughput and lower latency.</p>
+                    <h2>Contributions</h2>
+                    <p>Neural networks only have dependency between layers, and thus it is theoretically possible to fully parallelize inside a layer. However, due to millions, or even billions, of weights, this is practically impossible due to the lack of resources. In this project, we propose a novel implementation based on the bitwise neural networks. Specifically, we reschedule the compute process and successfully reuse some hardware components, which achieves a 1024-way parallelization with only a limited amount of resources.</p>
+                    <h2>Bitwise Neural Networks</h2>
+                    <p>Kim et al. propose a resource efficient design of deep neural network [3], which replaces float multiplication with bit XNOR and float addition with bit counting. Specifically, we only need to do XNOR between inputs and weights in one layer and the output to next layer is activated if the counts of ‘1’s is greater than a threshold. By this change, the workload pattern becomes very suitable and highly parallelizable for hardware, e.g. FPGA, at the expense of only a small decrease of accuracy, from 98.9% to 98.7%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End About Section-->
+
+	<!--About Team Section-->
+	<section class="for-full-back color-white challenge" id="about-team">
+		<div class="container">
+			<div class="row introduction">
+				<div class="col-md-12">
+					<h2>I want to insert a image here!</h2>
+					<div class="img-auto img-f5-auto"><img src="assets/img/f1.png"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--footer Section-->
+	<div class="for-full-back" id="footer">
+		This webpage refer: http://arainhyy.github.io/
+	</div>
+	<!-- JAVASCRIPT FILES PLACED AT THE BUTTOM TO REDUCE THE LOADING TIME -->
+	<!-- CORE JQUERY -->
+	<script src="assets/plugins/jquery-1.10.2.js"></script>
+	<!-- BOOTSTRAP CORE SCRIPT -->
+	<script src="assets/plugins/bootstrap.js"></script>
+	<!-- VEGAS SLIDESHOW SCRIPTS -->
+	<script src="assets/plugins/vegas/jquery.vegas.min.js"></script>
+	<!-- CUSTOM SCRIPTS -->
+	<script src="assets/js/custom.js"></script>
+</body>
+</html>
+
